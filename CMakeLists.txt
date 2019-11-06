@@ -19,10 +19,6 @@ if(DO_UNIT_TEST)
    add_definitions(-DDO_UNIT_TEST)
 endif()
 
-if(USE_PRINTF)
-   add_definitions(-DUSE_PRINTF)
-endif()
-
 add_executable( "${EXEC_NAME}" "${SRCS}" )
 target_link_libraries( "${EXEC_NAME}" m )
 
