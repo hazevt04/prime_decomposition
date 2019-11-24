@@ -10,7 +10,7 @@
 #else
 #  include <iostream>
 #endif
-
+#include <stdarg.h>
 #include <cstdlib>
 #include <cstddef>
 #include <chrono>
@@ -52,6 +52,7 @@ void gen_vals( T* vals, const T upper, const T lower, const int num_vals ) {
   }
 }
 
+int free_these(void *arg1, ...); 
 void printf_floats( float* const vals, const int num_vals );
 void printf_ints( int* const vals, const int num_vals );
 void printf_uints( unsigned int* const vals, const int num_vals );
@@ -79,7 +80,6 @@ void printf_ulongs( unsigned long* const vals, const int num_vals );
       exit(EXIT_FAILURE); \
    } \
 }
-
 
 
 #define try_func(status, msg, func) { \

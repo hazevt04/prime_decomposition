@@ -20,6 +20,6 @@ if(DO_UNIT_TEST)
 endif()
 
 add_executable( "${EXEC_NAME}" "${SRCS}" )
-target_link_libraries( "${EXEC_NAME}" m )
+target_link_libraries( "${EXEC_NAME}" m gsl gslcblas)
 
 
