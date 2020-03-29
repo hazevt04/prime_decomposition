@@ -6,7 +6,7 @@ include_directories( "${CMAKE_SOURCE_DIR}/include" )
 
 add_definitions( -std=c++11 )
 
-set(EXEC_NAME "foo")
+set(EXEC_NAME "${CMAKE_PROJECT_NAME}")
 
 set(SRCS
    "src/utils.cpp"
