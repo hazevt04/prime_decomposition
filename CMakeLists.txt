@@ -2,7 +2,7 @@ cmake_minimum_required( VERSION 2.8.0 )
 
 project( foo )
 
-include_directories( "${CMAKE_SOURCE_DIR}/include" )
+include_directories( "include" )
 
 add_definitions( -std=c++11 )
 
@@ -20,6 +20,6 @@ if(DO_UNIT_TEST)
 endif()
 
 add_executable( "${EXEC_NAME}" "${SRCS}" )
-target_link_libraries( "${EXEC_NAME}" m gsl gslcblas)
+target_link_libraries( "${EXEC_NAME}" m gsl gslcblas )
 
 

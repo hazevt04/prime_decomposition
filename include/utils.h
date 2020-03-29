@@ -32,17 +32,16 @@ inline int difference_or_zero(int a, int b) {
 
 
 #define MILLISECONDS_PER_SECOND (1000.0f)
-typedef std::chrono::high_resolution_clock High_Res_Clock;
-typedef std::chrono::time_point<std::chrono::high_resolution_clock> Time_Point;
+typedef std::chrono::steady_clock Steady_Clock;
+typedef std::chrono::time_point<std::chrono::steady_clock> Time_Point;
 typedef std::chrono::duration<float> Duration;
 
 //Example usage:
-//Time_Point start = High_Res_Clock::now();
+//Time_Point start = Steady_Clock::now();
 //Timed code goes here
-//Time_Point stop = High_Res_Clock::now();
-//Duration duration_ms = stop - start;
+//Duration duration_ms = Steady_Clock::now() - start;
 //milliseconds = duration_ms.count();
-//printf( "CPU: burst_search took %f milliseconds to search %d values\n", milliseconds, num_vals );
+//printf( "CPU: Func() took %f milliseconds to process %d values\n", milliseconds, num_vals );
 
 template <class T>
 void gen_vals( T* vals, const T upper, const T lower, const int num_vals ) {
