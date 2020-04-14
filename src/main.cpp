@@ -20,7 +20,7 @@ int main( int argc, char** argv ) {
 
    int prime_factors[val];
    int num_prime_factors = 0;
-   bool debug = true;
+   bool debug = false;
 
    prime_decomposition( &(prime_factors[0]), &num_prime_factors, val, debug );
 
@@ -33,4 +33,4 @@ int main( int argc, char** argv ) {
    exit( EXIT_SUCCESS );
 }
 
-// end of C++ file for main
+

@@ -5,7 +5,6 @@
 #include "sieve.h"
 
 inline bool divides( int num, int div ) {
-   debug_printf( true, "num is %d, div is %d\n", num, div );
    return ( ( num != 0 ) && ( ( num % div ) == 0 ) );
 }
 
