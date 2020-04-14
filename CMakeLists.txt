@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 2.8.0 )
 
-project( foo )
+project( prime_decomposition )
 
 include_directories( "include" )
 
@@ -10,16 +10,12 @@ set(EXEC_NAME "${CMAKE_PROJECT_NAME}")
 
 set(SRCS
    "src/utils.cpp"
+   "src/sieve.cpp"
+   "src/prime_decomposition.cpp"
    "src/main.cpp"
    )
 
-option(DO_UNIT_TEST "Unit test option" OFF)
-
-if(DO_UNIT_TEST)
-   add_definitions(-DDO_UNIT_TEST)
-endif()
-
 add_executable( "${EXEC_NAME}" "${SRCS}" )
-target_link_libraries( "${EXEC_NAME}" m gsl gslcblas )
+target_link_libraries( "${EXEC_NAME}" m )
 
 
