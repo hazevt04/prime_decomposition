@@ -2,12 +2,11 @@
 #define __PRIME_DECOMPOSITION_H__
 
 #include <math.h>
-#include "sieve.h"
+#include <vector>
+#include <gmpxx.h>
 
-inline bool divides( int num, int div ) {
-   return ( ( num != 0 ) && ( ( num % div ) == 0 ) );
-}
+#include "utils.h"
 
-void prime_decomposition( int* __restrict__ prime_factors, int* __restrict__ num_prime_factors, const int val, const bool debug );
+void prime_decomposition_gmp( std::vector<mpz_class>& prime_factors, const mpz_class val, const bool debug );
 
 #endif // end of #ifndef __PRIME_DECOMPOSITION_H__

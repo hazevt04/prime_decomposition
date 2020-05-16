@@ -5,11 +5,8 @@
 #define FAILURE -2
 
 // printf is preferred over std::cout
-#ifdef USE_PRINTF
-#  include <cstdio>
-#else
-#  include <iostream>
-#endif
+#include <iostream>
+#include <cstdio>
 #include <stdarg.h>
 #include <cstdlib>
 #include <cstddef>
