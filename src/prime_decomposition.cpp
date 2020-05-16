@@ -8,10 +8,9 @@
 void prime_decomposition( int* __restrict__ prime_factors, int* __restrict__ num_prime_factors, const int val, const bool debug=false ) {
    int t_prime = 2;
    int t_num_prime_factors = 0;
+   int pf_index = 0;
 
    int t_val = val;
-   int p_index = 0;
-   int pf_index = 0;
    while( t_val > 1 ) {
       if ( divides( t_val, t_prime ) ) {
          debug_printf( debug, "%s(): Temp Val is %d\n", __func__, t_val ); 
