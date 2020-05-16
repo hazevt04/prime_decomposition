@@ -2,7 +2,7 @@
 #define __PRIME_DECOMPOSITION_H__
 
 #include <math.h>
-#include "sieve.h"
+#include "utils.h"
 
 inline bool divides( int num, int div ) {
    return ( ( num != 0 ) && ( ( num % div ) == 0 ) );

@@ -24,6 +24,7 @@ int main( int argc, char** argv ) {
 
    prime_decomposition( &(prime_factors[0]), &num_prime_factors, val, debug );
 
+   debug_printf( debug, "Number of prime factors = %d\n", num_prime_factors ); 
    printf( "Prime Factors of %d: { ", val ); 
    for( int index = 0; index < num_prime_factors; index++ ) {
       printf( "%d%s ", prime_factors[index], ( ( index < (num_prime_factors-1) ) ? ",":"" ) ); 

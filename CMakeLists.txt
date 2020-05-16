@@ -10,7 +10,6 @@ set(EXEC_NAME "${CMAKE_PROJECT_NAME}")
 
 set(SRCS
    "src/utils.cpp"
-   "src/sieve.cpp"
    "src/prime_decomposition.cpp"
    "src/main.cpp"
    )
